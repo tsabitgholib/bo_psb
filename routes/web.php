@@ -15,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('admin/login', [AdminController::class, 'showLoginForm'])->name('admin.login');
-Route::post('admin/login', [AdminController::class, 'login']);
-Route::post('admin/logout', [AdminController::class, 'logout'])->name('admin.logout');
+Route::get('/', [AdminController::class, 'showLoginForm'])->name('admin.login');
+Route::post('/login', [AdminController::class, 'login']);
+Route::post('/logout', [AdminController::class, 'logout'])->name('admin.logout');
 
 Route::get('media', [MediaController::class, 'showMediaForm'])->name('media.uploadForm');
 Route::post('media/upload', [MediaController::class, 'upload'])->name('media.upload');
